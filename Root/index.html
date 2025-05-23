@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="google-signin-client_id" content="973439244871-18ck801t13cue7csas3vjv8hcnglppbj.apps.googleusercontent.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Share+Tech&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="containerInput">
+        <div class="leftImage">
+            <img src="../Asset/illustration.png" alt="" id="imageLeft">
+        </div>
+        <div class="rightForm">
+            <div><img src="../Asset/Group 1686550876.png" alt="error" id="iconRight"></div>
+            <div><span id="titleLogin"><b>Login to your Account</b></span></div>
+            <div><span id="desLogin">See what is going on with your business</span></div>
+            <div class="g-signin2" data-onsuccess="onSignIn"
+                    data-type="standard"
+                    data-size="large"
+                    data-theme="outline"
+                    data-shape="rectangular"
+                    data-logo_alignment="left"
+                    data-width="420">
+
+            
+            ></div >
+            <div id="des"><span>------------- or Sign in with Email ------------- </span></div>
+            <div class="formInput">
+                <form action="" id="input">
+                    <div id="inputEP">
+                        <div id = "emailInput">
+                            <label for="email">Email</label><br>
+                            <input type="text" id="email">
+                        </div>
+                        <div id ="passwordInput">
+                            <label for="password">Password</label><br>
+                            <input type="password" id="email">
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div id="containerRemember">
+                            <div id="remember"><input type="checkbox" name="" id=""></div>
+                            <div><span id="wordRemember">Remember Me</span></div>
+                        </div>
+                        <div id="forgot"><a href="">Forgot Password?</a></div>
+                    </div>
+                    <div class="login">
+                        <button id="btnLogin">Login</button>
+                    </div>
+                    <div class="signUp">
+                        <span>Not Registered Yet?</span>
+                        <a href="">Create an account</a>
+                    </div>
+
+                    
+                </form>
+                    <!-- <div class="info">
+                        <div>Nguyen Minh</div>
+                        <div>Duong Quoc Vuong</div>
+                        <div>Nguyen Khac Sy</div>
+                        <div>Nguyen The Truong</div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>

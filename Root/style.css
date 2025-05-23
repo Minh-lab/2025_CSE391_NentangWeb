@@ -1,0 +1,182 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+span, #btnLogin, label, a{
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    background-color: #FFE6C9;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+}
+
+.containerInput{
+    display: flex;
+}
+
+#imageLeft{
+    height: 100vh;
+    
+}
+.leftImage{
+    width: 60vw;
+}
+#iconRight{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 2%;
+}
+
+
+.rightForm{
+    width:40vw;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 100px 180px 190px 80px;
+    background-color: white;
+    gap: 2%;
+
+}
+
+#titleLogin{
+    font-size: 36px;
+    font-weight: 400px;
+}
+
+#desLogin{
+    font-size: 13px;
+    text-align: center;
+}
+
+.g-signin2{
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+#des{
+    text-align: center;
+}
+#inputEP{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+input[type=text], input[type=password]{
+    margin-top: 1.2%;
+    width: 420px;
+    height: 30px;
+}
+
+#passwordInput{
+    margin-top: 5%;
+}
+
+.menu{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: #7F265B;
+    font-weight: 400;
+}
+
+intput[type=checkbox]{
+    background-color: #7F265B;
+}
+
+intput[type=checkbox]:checked{
+    background-color: #7F265B;
+}
+
+#remember, #forgot, #wordRemember{
+    font-size: 12px;
+}
+
+#containerRemember{
+    display: flex;
+    justify-items: center;
+}
+
+#btnLogin{
+    margin-top: 4%;
+        width: 420px;
+        height: 50px;
+        text-decoration: none;
+        background-color: #7F265B;
+        color: white;
+        padding: 10px 13px 10px 12px;
+        text-align: center;
+        border-radius: 6px;
+        border: none;
+        
+}
+
+#btnLogin:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.signUp{
+    margin-top: 12%;
+}
+
+.info{
+    margin-top: 20%;
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+}
