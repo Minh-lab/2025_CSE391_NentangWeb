@@ -247,4 +247,11 @@ input{
     box-shadow: 1px 1px 3px rgb(0,255,0, 0.3);
 }
 
+.formControl.error .bi-exclamation-lg{
+    visibility: visible;
+}
+.formControl.success .bi-check2{
+    visibility: visible;
+}
+
 

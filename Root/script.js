@@ -1,41 +1,39 @@
-let email = document.querySelector("#email");
-let password = document.querySelector("#password");
-let formInput = document.querySelector("#input");
+$(document).ready(function(){
+        jQuery.validator.addMethod('valid_email', function (value) {
+            var regex = /^[a-z0-9]+([-._][a-z0-9]+)*@([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{1,5}$/;
+            return value.trim().match(regex);
+        });
+        jQuery.validator.addMethod('valid_password', function(value){
+            var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            return value.trim().match(regex);
+        })
+    $("#input").validate({
+            rules:{
+                "email":{
+                    required: true,
+                    valid_email:true  
+                },
+                "password":{
+                    required:true,
+                    valid_password:true
+                },
+            },
+            highlight: function(element){
+                const formControl = $(element).closest(".formControl");
+                formControl.addClass("error").removeClass("success");
+            }, 
+            unhighlight: function(element){
+                const formControl = $(element).closest(".formControl");
+                formControl.addClass("success").removeClass("error");
+            },
+            errorPlacement:function(error,element){
+                const formControl = $(element).closest(".formControl");
+                errorMessages = "Invalid!";
+                formControl.find(".errorInform").html(errorMessages).show();
+            },
 
-formInput.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    let emailValue = email.value.trim();
-    let passwordValue = password.value.trim();
-    if(emailValue === '' || emailValue === null){
-        setError(email, "Invalid Email!");
-    }
-    else
-        setSuccess(email)
+            
+        })
+        
 
-    
-    if(passwordValue === '' || passwordValue === null)
-        setError(password, "Invalid Password!");
-    else
-        setSuccess(password)
-})
-
-
-function setError(input, message){
-    let formControl = input.parentElement;
-    formControl.classList.remove("success");
-    formControl.classList.add("error");
-    formControl.querySelector(".bi-exclamation-lg").style.visibility = "visible";
-    let errorInform = formControl.querySelector(".errorInform");
-    errorInform.textContent = message;
-    errorInform.style.display = "block"
-}
-
-function setSuccess(input){
-    let formControl = input.parentElement;  
-    formControl.classList.remove("error");
-    formControl.classList.add("success");
-    formControl.querySelector(".bi-check2").style.visibility = "visible";
-    formControl.querySelector(".bi-exclamation-lg").style.visibility = "hidden";
-    let errorInform = formControl.querySelector(".errorInform");
-    errorInform.style.display = "none"
-}
+    });
