@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <meta name="google-signin-client_id" content="973439244871-18ck801t13cue7csas3vjv8hcnglppbj.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="169706389283-r640979738hei6uia38saqhtpovc18ch.apps.googleusercontent.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Share+Tech&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <h1><a href="https://www.sitepoint.com/basic-jquery-form-validation-tutorial/">https://www.sitepoint.com/basic-jquery-form-validation-tutorial/</a></h1>
+	<h2><a href="https://viblo.asia/p/tim-hieu-ve-jquery-validation-phan-1-E375zEqRlGW">"https://viblo.asia/p/tim-hieu-ve-jquery-validation-phan-1-E375zEqRlGW</a></h2>
+	<h2><a href="https://viblo.asia/p/mot-vai-bieu-thuc-chinh-quy-thuong-dung-QpmleoBVKrd">https://viblo.asia/p/mot-vai-bieu-thuc-chinh-quy-thuong-dung-QpmleoBVKrd</a></h2>
 
 </head>
 <body>
@@ -29,18 +33,24 @@
                     data-width="420">
 
             
-            ></div >
+            </div >
             <div id="des"><span>------------- or Sign in with Email ------------- </span></div>
             <div class="formInput">
                 <form action="" id="input">
                     <div id="inputEP">
-                        <div id = "emailInput">
+                        <div class = "formControl">
                             <label for="email">Email</label><br>
-                            <input type="text" id="email">
+                            <input type="text" id="email" >
+                            <i class="bi bi-exclamation-lg"></i>
+                            <i class="bi bi-check2"></i>
+                            <span class="errorInform">This is error</span>
                         </div>
-                        <div id ="passwordInput">
+                        <div class ="formControl">
                             <label for="password">Password</label><br>
-                            <input type="password" id="email">
+                            <input type="password" id="password" >
+                            <i class="bi bi-exclamation-lg"></i>
+                            <i class="bi bi-check2"></i>
+                            <span class="errorInform"></span>
                         </div>
                     </div>
                     <div class="menu">
@@ -48,10 +58,13 @@
                             <div id="remember"><input type="checkbox" name="" id=""></div>
                             <div><span id="wordRemember">Remember Me</span></div>
                         </div>
-                        <div id="forgot"><a href="">Forgot Password?</a></div>
+                        <div id="forgot" ><a href="" id="linkForgot">Forgot Password?</a></div>
+                    </div>
+                    <div id="containerError">
+                        <span id="error"></span>
                     </div>
                     <div class="login">
-                        <button id="btnLogin">Login</button>
+                        <input type="submit" id="btnLogin" value="Login"></input>
                     </div>
                     <div class="signUp">
                         <span>Not Registered Yet?</span>
@@ -70,5 +83,6 @@
         </div>
     </div>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="./script.js"></script>
 </body>
 </html>

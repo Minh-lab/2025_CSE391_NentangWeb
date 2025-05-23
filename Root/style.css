@@ -23,7 +23,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-span, #btnLogin, label, a{
+span, #btnLogin, label, a, #error{
   font-family: "Nunito Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
@@ -82,7 +82,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-items: center;
-    padding: 100px 180px 190px 80px;
+    padding: 70px 180px 190px 80px;
     background-color: white;
     gap: 2%;
 
@@ -94,6 +94,7 @@ body{
 }
 
 #desLogin{
+    margin-top: 2%;
     font-size: 13px;
     text-align: center;
 }
@@ -113,20 +114,17 @@ body{
 
 
 input[type=text], input[type=password]{
-    margin-top: 1.2%;
+    margin-top: 1%;
     width: 420px;
     height: 30px;
 }
 
-#passwordInput{
-    margin-top: 5%;
+.formControl{
+    margin-top: 3%;
+    position: relative;
 }
 
-.menu{
-    margin-top: 2%;
-    display: flex;
-    justify-content: space-between;
-}
+
 
 a{
     text-decoration: none;
@@ -152,7 +150,7 @@ intput[type=checkbox]:checked{
 }
 
 #btnLogin{
-    margin-top: 4%;
+        margin-top: 0.9%;
         width: 420px;
         height: 50px;
         text-decoration: none;
@@ -171,7 +169,8 @@ intput[type=checkbox]:checked{
 }
 
 .signUp{
-    margin-top: 12%;
+    margin-top: 7%;
+    margin-bottom: 12%;
 }
 
 .info{
@@ -180,3 +179,72 @@ intput[type=checkbox]:checked{
     display: flex;
     justify-content: space-between;
 }
+#containerError{
+    margin-top: 2%;
+    display: flex;
+    justify-items: center;
+
+}
+#error{
+    color: red;
+    font-weight: 500;
+    visibility: hidden;
+
+}
+#forgot{
+    display: flex;
+    justify-items: center;
+}
+#linkForgot{
+    margin-top: 6.2px;
+}
+
+.menu{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+input{
+    padding: 2px;
+    border-radius: 3px;
+    border: 1.2px solid black;
+}
+#email, #password{
+    position: relative;
+}
+.bi-exclamation-lg{
+    position: absolute;
+    top: 30px;
+    right: 2%;
+    color: red;
+   visibility: hidden;
+}
+.bi-check2{
+    position: absolute;
+    top: 30px;
+    right: 2%;
+    color: green;
+    visibility: hidden;
+}
+#inputEP{
+    margin-top: 5%;
+}   
+.errorInform{
+    margin-top: 1%;
+    display: none;
+    font-style: italic;
+    font-size: 12px;
+    color: red;
+}
+
+.formControl.error input{
+    border-color: red;
+    box-shadow: 1px 1px 3px rgb(255,0,0, 0.5);
+}
+.formControl.success input{
+    border-color: green;
+    box-shadow: 1px 1px 3px rgb(0,255,0, 0.3);
+}
+
+
