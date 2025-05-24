@@ -21,10 +21,12 @@ $(document).ready(function(){
             highlight: function(element){
                 const formControl = $(element).closest(".formControl");
                 formControl.addClass("error").removeClass("success");
+                
             }, 
             unhighlight: function(element){
                 const formControl = $(element).closest(".formControl");
                 formControl.addClass("success").removeClass("error");
+                                formControl.find(".errorInform").html(errorMessages).hide();
             },
             errorPlacement:function(error,element){
                 const formControl = $(element).closest(".formControl");
