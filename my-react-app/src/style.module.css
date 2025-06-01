@@ -1,0 +1,195 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+span, #btnLogin, label, a, #error{
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+* {
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+
+body {
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+	content: none;
+}
+table {
+    border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* style.module.css */
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.leftForm {
+  width: 55%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.leftImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+    box-shadow: 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+
+.rightForm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    width: 45%;
+    gap: 20px;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+.formControl{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+
+}
+
+.errorEmail{
+    display: none;
+}
+.errorPassword{
+    display: none;
+}
+
+
+input[type="submit"]{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+}
+input[type="submit"]:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+input[type="password"], input[type="text"] {
+    margin-top: 1%;
+    width: 30vw;
+    height: 20px;
+    border: none; 
+    border-bottom: 1px solid; 
+}
+input[type="password"]:focus {
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    outline: none;
+}
+input[type="text"]:focus {
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    outline: none;
+}
+
+.signWithGoogle{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid black;
+    justify-items: center;
+}
+.signWithGoogle:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.iconGoogle{
+    width: 20px;
+    height: 20px;
+    margin-top: 1%;
+
+}
+.spanTitle{
+    align-self:center ;
+}
+h1{
+    font-size: 32px;
+}
+p{
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 200;
+    margin-top: 2%;
+}
+.footer{
+    margin-top: 5%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+}
+.inform{
+    color:	rgb(34, 139, 34) ;
+    font-style: italic;
+}
+
