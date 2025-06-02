@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from 'react-dom/client';
 import styles from './style.module.css';
 import asset from './Asset/asset.js';
-import LeftImage from "./left.module.js";
-import RightContent from "./right.module.js"
+import LeftImage from "./image.module.js";
+import FormTest from "./form.module.js"
 import { BrowserRouter } from "react-router-dom";
 const MyApp = ()=> {
   return(
     <div className={styles.container}>
           <LeftImage />
-        <BrowserRouter><RightContent />  </BrowserRouter> 
+        <BrowserRouter><FormTest />  </BrowserRouter> 
     </div>
   )
 }

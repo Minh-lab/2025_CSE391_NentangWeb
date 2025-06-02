@@ -1,20 +1,18 @@
-import React, {useRef, useState} from "react";
+import React, { useState} from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import styles from '../src/style.module.css';
-import { useNavigate } from "react-router-dom";
+import styles from '../src/style.module.css';   
 
 
-export const RightContent = ()=>{
-        const navigate = useNavigate();
+export const FormTest = ()=>{
         const [inform,setInform] = useState("");
         const schema = yup.object({
             email: yup.string().required("Email is required").matches(/^\S+@\S+\.\S+$/, "Invalid Email"),
-            password: yup.string().required("Invalid Password").matches(/^[A-Za-z\d]{6,}$/, "Invalid Password"),
+            password: yup.string().required("Password is required").matches(/^[A-Za-z\d]{6,}$/, "Invalid Password"),
             rePassword: yup.string().required("Re-Password is required").oneOf([yup.ref('password')], "Passwords do not match")
         })
-       const {register, handleSubmit, formState:{  errors} , reset } = useForm({resolver: yupResolver(schema)})
+       const {register, handleSubmit, formState:{  errors } , reset } = useForm({resolver: yupResolver(schema)})
 
        const onSubmit = (data)=>{
         let arrayUser = JSON.parse(localStorage.getItem("user")) || []; 
@@ -28,9 +26,8 @@ export const RightContent = ()=>{
         const currentData = data;
         arrayUser.push(currentData);
         localStorage.setItem("user",JSON.stringify(arrayUser));
-        console.log(currentData);
         setInform("✔️ Registered successfully");
-        reset();
+       reset(); 
         setTimeout(()=>{
             window.location.href = "https://www.google.com.vn/?hl=vi";
 
@@ -56,14 +53,14 @@ export const RightContent = ()=>{
                             {errors.email && <span style={{fontStyle : "italic", color:"red"}}>{errors.email.message}</span>}
                             <div>           
                                 <label htmlFor="password">Password</label><br></br>
-                                <input type="password" id="password" {...register("password")} />
+                                <input type="text" id="password" {...register("password")} />
                             </div>
 
                                 {errors.password && <span style={{fontStyle : "italic", color:"red"}}>{errors.password.message}</span>}
     
                             <div>
                                 <label htmlFor="re_password">Re-Password</label><br></br>
-                                <input type="password" id="re_password" {...register('rePassword')} />
+                                <input type="text" id="re_password" {...register('rePassword')} />
                             </div>
                                 {errors.rePassword && <span style={{fontStyle : "italic", color:"red"}}>{errors.rePassword.message}</span>}
                                 {inform && (<span className={inform.includes("❌") ? styles.error : styles.success}>{inform}</span>
@@ -93,7 +90,7 @@ export const RightContent = ()=>{
     </div>
     )
 }
-export default RightContent
+export default FormTest
 
 
 
